@@ -1,0 +1,11 @@
+label{
+    margin-left: 2%;
+    font-weight: normal;
+}
+.correct-ans{
+    color: green;
+    font-weight: bold;
+}
+.your-ans{
+    font-weight: bold;
+}

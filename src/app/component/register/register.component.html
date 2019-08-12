@@ -1,0 +1,26 @@
+<div class="container">
+
+  <h1>Welcome to Online Test Application</h1>
+  <h3>Fill your details to start test</h3>
+
+  <div class="row justify-content-center">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <form #form="ngForm" (ngSubmit)="save(form.value)">
+      <div class="form-group" [class.has-error]="name.invalid && name.touched" [class.has-success]="name.valid">
+        <label for="name" class="control-label">Name</label>
+        <input #name="ngModel" name="name" class="form-control" type="text" ngModel required/>
+        <span *ngIf="name.invalid && name.touched" class="help-block">Name is required</span>
+       </div>
+       <div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid">
+          <label class="control-label" for="email">Email</label>
+          <input #email="ngModel" name="email" class="form-control" 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel required/>
+          <span *ngIf="email.invalid && email.touched" class="help-block">Valid Email is required</span>
+         </div>
+        <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div class="col-md-4"></div>
+  </div>
+</div>

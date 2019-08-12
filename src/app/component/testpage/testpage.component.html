@@ -1,0 +1,17 @@
+<div class="container">
+<h1>Welcome, {{user?.name}}</h1>
+<h3>Select appropriate option and submit your answers</h3>
+<form #test="ngForm" (ngSubmit)="save(test.value)">
+  <div class="form-check" *ngFor="let que of question">
+  <p>{{que.quetionKey}}) {{que.question}}</p>
+  <div class="options" *ngFor="let option of que.options">
+    <input class="form-check-input" type="radio" [name]="que.quetionKey" [value]="option.value"
+    ngModel>
+    <label class="form-check-label" [for]="que.quetionKey">
+      {{option.key}}
+    </label>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

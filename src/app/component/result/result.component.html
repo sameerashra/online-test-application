@@ -1,0 +1,15 @@
+<div class="container">
+   <div *ngIf="result">
+      <div class="form-check" *ngFor="let que of question">
+      <p>{{que.quetionKey}}) {{que.question}}</p>
+      <div class="options" *ngFor="let option of que.options">
+        <label class="form-check-label" [for]="que.quetionKey">
+          {{option.key}}
+          <span class="correct-ans" *ngIf="answers[que.quetionKey-1].answer.answerKey == option.value"> | Correct Answer</span>
+          <span class="your-ans" *ngIf="result[que.quetionKey] == option.value"> | Your Answer</span>
+        </label>
+      </div>
+      </div>
+      <button class="btn btn-primary" routerLink='/test'>Retake Test</button>
+    </div>
+</div>

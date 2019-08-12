@@ -1,0 +1,12 @@
+<div>
+  <div class="jumbotron report">
+        <h2>Hello, {{name?.name }}</h2>
+        <h3>Your result is {{Score(count,totalCount) | number:'.0-1'}}%</h3>
+  
+  <h3>
+    <span>Correct Answers: {{count}}/{{totalCount}}</span>
+  </h3>
+  <button class="btn btn-primary" routerLink='/test'>Retake Test</button>
+  <button class="btn btn-primary" routerLink='/result'>Review Result</button>
+  </div>
+</div>
