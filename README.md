@@ -1,6 +1,6 @@
 # OnlineTest
 
-online test app that enables user to provide test and review result.
+Online test app that enables user to provide test and review result.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
